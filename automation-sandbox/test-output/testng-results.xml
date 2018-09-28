@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="100897" started-at="2018-09-28T19:58:49Z" finished-at="2018-09-28T20:00:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="100897" started-at="2018-09-28T19:58:49Z" finished-at="2018-09-28T20:00:30Z">
+      <class name="tests.login">
+        <test-method status="PASS" signature="autenticaFalha(java.lang.String, java.lang.String)[pri:0, instance:tests.login@4667ae56]" name="autenticaFalha" duration-ms="24904" started-at="2018-09-28T19:58:49Z" data-provider="getData" finished-at="2018-09-28T19:59:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demouser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- autenticaFalha -->
+        <test-method status="PASS" signature="autenticaFalha(java.lang.String, java.lang.String)[pri:0, instance:tests.login@4667ae56]" name="autenticaFalha" duration-ms="19149" started-at="2018-09-28T19:59:14Z" data-provider="getData" finished-at="2018-09-28T19:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[demouser_]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[xyz]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- autenticaFalha -->
+        <test-method status="PASS" signature="autenticaFalha(java.lang.String, java.lang.String)[pri:0, instance:tests.login@4667ae56]" name="autenticaFalha" duration-ms="22132" started-at="2018-09-28T19:59:33Z" data-provider="getData" finished-at="2018-09-28T19:59:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[demouser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[nananana]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- autenticaFalha -->
+        <test-method status="PASS" signature="autenticaFalha(java.lang.String, java.lang.String)[pri:0, instance:tests.login@4667ae56]" name="autenticaFalha" duration-ms="17891" started-at="2018-09-28T19:59:55Z" data-provider="getData" finished-at="2018-09-28T20:00:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demouser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- autenticaFalha -->
+        <test-method status="PASS" signature="loginComSucesso()[pri:0, instance:tests.login@4667ae56]" name="loginComSucesso" duration-ms="16745" started-at="2018-09-28T20:00:13Z" finished-at="2018-09-28T20:00:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginComSucesso -->
+      </class> <!-- tests.login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

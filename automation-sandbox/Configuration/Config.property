@@ -1,0 +1,4 @@
+ChromeDriver=/users/pferreira/drivers/chromedriver
+IEDriver= 
+URL=https://automation-sandbox.herokuapp.com
+ExcelPath=
