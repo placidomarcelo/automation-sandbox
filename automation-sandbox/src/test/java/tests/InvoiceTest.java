@@ -60,7 +60,7 @@ public class InvoiceTest {
 		
 		//Validate Customer Details
 		invoicepage.validateCustomerDetails("JOHNY SMITH", "R2, AVENUE DU MAROC", "123456");
-		
+				
 		//Validate Room
 		invoicepage.validateRoomType("Superior Double");
 		

@@ -4,6 +4,8 @@ import static org.testng.Assert.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,14 +19,14 @@ public class InvoicePage {
 	private WebDriver driver;
 	By hotelName = By.xpath("//h4[@class='mt-5']");
 	By invoiceDate = By.xpath("//section[@class='content']//ul//li[1]"); 
-	By invoiceDueDate = By.xpath("//span[contains(text(),'Due Date:')]");
+	By invoiceDueDate = By.xpath("//span[contains(text(),'Due Date:')]//..");
 	By invoiceNumber = By.xpath("//h6[@class='mt-2']");
 	By bookingCode = By.xpath("//td[contains(text(),'Booking Code')]//following-sibling::td");
 	By customerDetails = By.xpath("//h5[contains(text(),'Customer Details')]//following-sibling::div");
 	By room = By.xpath("//td[contains(text(),'Room')]//following-sibling::td");
 	By checkInDate = By.xpath("//td[contains(text(),'Check-In')]//following-sibling::td");
 	By checkOutDate = By.xpath("//td[contains(text(),'Check-Out')]//following-sibling::td");
-	By totalStayCount = By.xpath("//td[contains(text(),'Total Stay Amount')]//following-sibling::td");
+	By totalStayCount = By.xpath("//td[contains(text(),'Total Stay Count')]//following-sibling::td");
 	By totalStayAmount = By.xpath("//td[contains(text(),'Total Stay Amount')]//following-sibling::td");
 	By depositNow = By.xpath("//td[contains(text(),'USD $20.90')]");
 	By taxVat = By.xpath("//td[contains(text(),'USD $19')]");
@@ -80,7 +82,7 @@ public class InvoicePage {
 	}
 
 	public void validateInvoiceInvoiceNumber(String InvoiceNumber) {
-		assertEquals (InvoiceNumber , this.invoiceDueDate().split(" ")[1].split("#")[1]);
+		assertEquals (InvoiceNumber , this.invoiceNumber().split(" ")[1].split("#")[1]);
 	}
 
 	public String bookingCode() {
@@ -92,33 +94,21 @@ public class InvoicePage {
 		assertEquals (Booking , this.bookingCode());
 	}
 
-	public List<String> customerDetails() {
-		List<WebElement> customerdetails = driver.findElements(customerDetails);
-		List<String> list = new ArrayList<String>();
-		for (WebElement a : customerdetails) { // percorre elementos adicionando na 'list' o 'text' deles.
-			list.add(a.getText());
-		}
-		return list;
+	public String customerDetails() {
+		return retrieveWebElementText(customerDetails);
+				
 	}
 
 	public void validateCustomerDetails(String name, String address, String number) {
-		boolean boolControl;
-		boolControl = true;
-		for (String stringCustomerDetails : customerDetails()) {
-			if (stringCustomerDetails.equals(name) || stringCustomerDetails.equals(address)
-					|| stringCustomerDetails.equals(number)) {
-				continue;
-			} // achou, não faz nada!
-			else {
-				boolControl = false; // caso não tenha a entrada seta para falso e para a execução, se não e
-				break;
-			}
-		}
-		assertEquals(boolControl, "true"); // confirma que achou todos elementos... se estiver 'false' não achou
-											// algo....
+		String s1 = this.customerDetails();
+		
+		assertTrue(Pattern.compile(Pattern.quote(name), Pattern.CASE_INSENSITIVE).matcher(s1).find() &&
+			Pattern.compile(Pattern.quote(address), Pattern.CASE_INSENSITIVE).matcher(s1).find() &&
+			Pattern.compile(Pattern.quote(number), Pattern.CASE_INSENSITIVE).matcher(s1).find());
+				
 	}
 
-	// metodo room e validação room
+	
 	public String roomType() {
 		return retrieveWebElementText(room);
 	}
@@ -146,7 +136,6 @@ public class InvoicePage {
 		assertEquals (checkout , this.checkOutDate());
 	}
 
-	// method Total Stay and validação Total Stay
 	public String totalStayCount() {
 		return retrieveWebElementText(totalStayCount);
 	}
@@ -156,13 +145,12 @@ public class InvoicePage {
 		
 	}
 	
-	// method Total Stay Amount and validação Total Stay AMount
 	public String totalStayAmount() {
 		return retrieveWebElementText(totalStayAmount);
 	}
 	
 	public void validateTotalStayAmount(String totalStayAmount) {
-		assertEquals(totalStayAmount, this.totalStayAmount);
+		assertEquals(totalStayAmount, this.totalStayAmount());
 	}
 	
 
@@ -177,10 +165,14 @@ public class InvoicePage {
 
 	public String taxVat() {
 		return retrieveWebElementText(taxVat);
+		
 
 	}
 
 	public void validateTaxVat(String taxvat) {
+		if (taxvat.endsWith(".00")) {
+			taxvat = taxvat.substring(0, taxvat.lastIndexOf("."));
+		}
 		assertEquals (taxvat , this.taxVat());
 	}
 
@@ -190,7 +182,10 @@ public class InvoicePage {
 	}
 
 	public void validateTotalAmount(String totalamount) {
+		if (totalamount.endsWith(".00")) {
+			totalamount = totalamount.substring(0, totalamount.lastIndexOf("."));
+		}
 		assertEquals (totalamount , this.totalAmount());
 	}
-
+	
 }
