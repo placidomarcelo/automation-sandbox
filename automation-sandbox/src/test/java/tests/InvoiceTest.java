@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-
+import com.relevantcodes.extentreports.LogStatus;
 
 import pages.BookingPage;
 import pages.InvoicePage;
@@ -50,7 +50,12 @@ public class InvoiceTest extends ExtentReportsClass {
 		}
 		// Validate Hotel Name
 		invoicepage.validateHotelName("Rendezvous Hotel");
-						
+		if(invoicepage.validateHotelName("Rendezvous Hotel"))	{
+			logger.log(LogStatus.PASS, "Test case passed");
+		}else {
+			logger.log(LogStatus.FAIL, "Test case failed");
+		}
+			
 		//Validate Invoice Date
 		invoicepage.validateInvoiceDate("14/01/2018");
 		

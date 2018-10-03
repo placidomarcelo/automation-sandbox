@@ -1,0 +1,11 @@
+<suite name="Automation-Sandbox">
+ 
+<test name="sandbox">
+ 
+<classes>
+<class name="tests.Login" />
+<class name="tests.InvoiceTest" />
+ 
+</classes>
+</test>
+</suite>

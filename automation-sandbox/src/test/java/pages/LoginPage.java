@@ -34,21 +34,12 @@ public class LoginPage {
 		driver.findElement(buttonSubmit).click();  
 	}
 	
-	
-	public void performLoginWithFail(String username, String password) {
-		LoginPage loginPage = new LoginPage(driver);
-		loginPage.performLogin(username, password);
-		WebElement mensagemError = driver.findElement(messageloginerror);
-		String mensagem = mensagemError.getText();
-		assertEquals("Wrong username or password.", mensagem);
-	}
-
+		
 	public boolean  performLoginWithFailBoolean(String username, String password) {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.performLogin(username, password);
 		WebElement mensagemError = driver.findElement(messageloginerror);
 		String mensagem = mensagemError.getText();
-		System.out.println("Wrong username or password." +  mensagem);
 		return ("Wrong username or password." == mensagem);
 }
 	}

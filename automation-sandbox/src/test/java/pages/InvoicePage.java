@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.relevantcodes.extentreports.LogStatus;
+
 /**
  * The class contains methods to validate Invoice Page.
  */
@@ -52,8 +54,9 @@ public class InvoicePage {
 
 	}
 
-	public void validateHotelName(String hotelName) {
-		assertEquals (hotelName , this.hotelName());
+	public boolean validateHotelName(String hotelName) {
+		return (hotelName == this.hotelName());
+			
 		
 	}
 
