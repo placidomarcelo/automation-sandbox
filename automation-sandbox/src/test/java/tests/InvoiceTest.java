@@ -6,18 +6,23 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+
+
 import pages.BookingPage;
 import pages.InvoicePage;
 import pages.LoginPage;
+import reports.ExtentReportsClass;
+
 
 /**
  * Validate invoice page.
  */
 
-public class InvoiceTest {
+public class InvoiceTest extends ExtentReportsClass {
 
-	@Test
+	@Test (priority = 2, description="Validate the invoice information displayed on the screen.")
 	public void autenticainvoice() {
+		logger = extent.startTest("Validate the invoice information displayed on the screen.");
 		WebDriver driver;
 		System.setProperty("webdriver.chrome.driver", "/users/pferreira/drivers/chromedriver");
 		driver = new ChromeDriver();
