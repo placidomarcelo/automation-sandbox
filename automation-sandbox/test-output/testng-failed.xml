@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Automation-Sandbox]">
-  <test thread-count="5" name="sandbox(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.InvoiceTest">
+      <class name="tests.Login">
         <methods>
-          <include name="autenticainvoice"/>
+          <include name="before"/>
           <include name="startTest"/>
+          <include name="autenticaFalha" invocation-numbers="0 1 2 3"/>
           <include name="getResult"/>
+          <include name="after"/>
           <include name="endReport"/>
         </methods>
-      </class> <!-- tests.InvoiceTest -->
+      </class> <!-- tests.Login -->
     </classes>
-  </test> <!-- sandbox(failed) -->
-</suite> <!-- Failed suite [Automation-Sandbox] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

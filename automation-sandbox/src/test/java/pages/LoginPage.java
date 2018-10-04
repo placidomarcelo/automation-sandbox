@@ -1,10 +1,8 @@
 package pages;
 
-import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeMethod;
 
 /**
  * Log in with valid and invalid credentials.
@@ -21,25 +19,22 @@ public class LoginPage {
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 	}
-	
-	@BeforeMethod
+
 	public void visita() {
 		driver.get(url);
 	}
-	
-	
+
 	public void performLogin(String username, String password) {
 		driver.findElement(fieldUsername).sendKeys(username);
 		driver.findElement(fieldPassword).sendKeys(password);
-		driver.findElement(buttonSubmit).click();  
+		driver.findElement(buttonSubmit).click();
 	}
-	
-		
-	public boolean  performLoginWithFailBoolean(String username, String password) {
+
+	public boolean performLoginWithFailBoolean(String username, String password) {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.performLogin(username, password);
 		WebElement mensagemError = driver.findElement(messageloginerror);
 		String mensagem = mensagemError.getText();
 		return ("Wrong username or password." == mensagem);
-}
 	}
+}

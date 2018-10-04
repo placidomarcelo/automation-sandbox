@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.relevantcodes.extentreports.LogStatus;
 
 /**
  * The class contains methods to validate Invoice Page.
