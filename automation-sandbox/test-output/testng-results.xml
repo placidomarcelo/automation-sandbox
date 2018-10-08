@@ -2,46 +2,46 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43561" started-at="2018-10-04T17:50:55Z" finished-at="2018-10-04T17:51:38Z">
+  <suite name="Default suite" duration-ms="37668" started-at="2018-10-08T19:20:14Z" finished-at="2018-10-08T19:20:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43561" started-at="2018-10-04T17:50:55Z" finished-at="2018-10-04T17:51:38Z">
+    <test name="Default test" duration-ms="37668" started-at="2018-10-08T19:20:14Z" finished-at="2018-10-08T19:20:51Z">
       <class name="tests.InvoiceTest">
-        <test-method status="PASS" signature="startTest()[pri:0, instance:tests.InvoiceTest@b91d8c4]" name="startTest" is-config="true" duration-ms="869" started-at="2018-10-04T17:50:55Z" finished-at="2018-10-04T17:50:56Z">
+        <test-method status="PASS" signature="startTest()[pri:0, instance:tests.InvoiceTest@239963d8]" name="startTest" is-config="true" duration-ms="429" started-at="2018-10-08T19:20:14Z" finished-at="2018-10-08T19:20:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="before()[pri:0, instance:tests.InvoiceTest@b91d8c4]" name="before" is-config="true" duration-ms="6931" started-at="2018-10-04T17:50:56Z" finished-at="2018-10-04T17:51:03Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:tests.InvoiceTest@239963d8]" name="before" is-config="true" duration-ms="2863" started-at="2018-10-08T19:20:14Z" finished-at="2018-10-08T19:20:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="autenticainvoice()[pri:2, instance:tests.InvoiceTest@b91d8c4]" name="autenticainvoice" duration-ms="33713" started-at="2018-10-04T17:51:03Z" description="Validate the invoice information displayed on the screen." finished-at="2018-10-04T17:51:37Z">
+        <test-method status="PASS" signature="autenticainvoice()[pri:2, instance:tests.InvoiceTest@239963d8]" name="autenticainvoice" duration-ms="33660" started-at="2018-10-08T19:20:17Z" description="Validate the invoice information displayed on the screen." finished-at="2018-10-08T19:20:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- autenticainvoice -->
-        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.InvoiceTest@b91d8c4]" name="after" is-config="true" duration-ms="274" started-at="2018-10-04T17:51:37Z" finished-at="2018-10-04T17:51:37Z">
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.InvoiceTest@239963d8]" name="after" is-config="true" duration-ms="161" started-at="2018-10-08T19:20:51Z" finished-at="2018-10-08T19:20:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=autenticainvoice status=SUCCESS method=InvoiceTest.autenticainvoice()[pri:2, instance:tests.InvoiceTest@b91d8c4] output={null}]]]>
+                <![CDATA[[TestResult name=autenticainvoice status=SUCCESS method=InvoiceTest.autenticainvoice()[pri:2, instance:tests.InvoiceTest@239963d8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.InvoiceTest@b91d8c4]" name="getResult" is-config="true" duration-ms="7" started-at="2018-10-04T17:51:37Z" finished-at="2018-10-04T17:51:37Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.InvoiceTest@239963d8]" name="getResult" is-config="true" duration-ms="4" started-at="2018-10-08T19:20:51Z" finished-at="2018-10-08T19:20:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=autenticainvoice status=SUCCESS method=InvoiceTest.autenticainvoice()[pri:2, instance:tests.InvoiceTest@b91d8c4] output={null}]]]>
+                <![CDATA[[TestResult name=autenticainvoice status=SUCCESS method=InvoiceTest.autenticainvoice()[pri:2, instance:tests.InvoiceTest@239963d8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:tests.InvoiceTest@b91d8c4]" name="endReport" is-config="true" duration-ms="1121" started-at="2018-10-04T17:51:37Z" finished-at="2018-10-04T17:51:38Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:tests.InvoiceTest@239963d8]" name="endReport" is-config="true" duration-ms="514" started-at="2018-10-08T19:20:51Z" finished-at="2018-10-08T19:20:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
