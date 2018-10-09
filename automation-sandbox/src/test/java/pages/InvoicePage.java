@@ -27,9 +27,9 @@ public class InvoicePage {
 	By checkOutDate = By.xpath("//td[contains(text(),'Check-Out')]//following-sibling::td");
 	By totalStayCount = By.xpath("//td[contains(text(),'Total Stay Count')]//following-sibling::td");
 	By totalStayAmount = By.xpath("//td[contains(text(),'Total Stay Amount')]//following-sibling::td");
-	By depositNow = By.xpath("//td[contains(text(),'USD $20.90')]");
-	By taxVat = By.xpath("//td[contains(text(),'USD $19')]");
-	By totalAmount = By.xpath("//td[contains(text(),'USD $209')]");
+	By depositNow = By.xpath("//td[contains(text(),'Deposit Nowt')]//..//..//../tbody//tr//td[1]");
+	By taxVat = By.xpath("//td[contains(text(),'Tax&VAT')]//..//..//../tbody//tr//td[2]");
+	By totalAmount = By.xpath("//td[contains(text(),'Total Amount')]//..//..//../tbody//tr//td[3]");
 
 	public InvoicePage(WebDriver driver) {
 		this.driver = driver;
