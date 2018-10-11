@@ -15,14 +15,16 @@ import com.relevantcodes.extentreports.LogStatus;
 import pages.AccountPage;
 import pages.LoginPage;
 import reports.ExtentReportsClass;
+import utility.ConfigReader;
 
 public class Login extends ExtentReportsClass {
 
 	WebDriver driver;
+	ConfigReader config = new ConfigReader();
 
 	@BeforeMethod
 	public void before() {
-		System.setProperty("webdriver.chrome.driver", "/users/pferreira/drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", config.getChromePath());
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 	}

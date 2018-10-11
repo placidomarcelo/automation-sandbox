@@ -1,51 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37668" started-at="2018-10-08T19:20:14Z" finished-at="2018-10-08T19:20:51Z">
+  <suite name="Default suite" duration-ms="83759" started-at="2018-10-11T15:08:11Z" finished-at="2018-10-11T15:09:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="37668" started-at="2018-10-08T19:20:14Z" finished-at="2018-10-08T19:20:51Z">
-      <class name="tests.InvoiceTest">
-        <test-method status="PASS" signature="startTest()[pri:0, instance:tests.InvoiceTest@239963d8]" name="startTest" is-config="true" duration-ms="429" started-at="2018-10-08T19:20:14Z" finished-at="2018-10-08T19:20:14Z">
+    <test name="Default test" duration-ms="83759" started-at="2018-10-11T15:08:11Z" finished-at="2018-10-11T15:09:35Z">
+      <class name="tests.Login">
+        <test-method status="PASS" signature="startTest()[pri:0, instance:tests.Login@57fffcd7]" name="startTest" is-config="true" duration-ms="492" started-at="2018-10-11T15:08:11Z" finished-at="2018-10-11T15:08:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="before()[pri:0, instance:tests.InvoiceTest@239963d8]" name="before" is-config="true" duration-ms="2863" started-at="2018-10-08T19:20:14Z" finished-at="2018-10-08T19:20:17Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:tests.Login@57fffcd7]" name="before" is-config="true" duration-ms="3627" started-at="2018-10-11T15:08:12Z" finished-at="2018-10-11T15:08:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="autenticainvoice()[pri:2, instance:tests.InvoiceTest@239963d8]" name="autenticainvoice" duration-ms="33660" started-at="2018-10-08T19:20:17Z" description="Validate the invoice information displayed on the screen." finished-at="2018-10-08T19:20:51Z">
+        <test-method status="PASS" signature="loginComSucesso()[pri:0, instance:tests.Login@57fffcd7]" name="loginComSucesso" duration-ms="14421" started-at="2018-10-11T15:08:15Z" description="Valid login with correct username and password." finished-at="2018-10-11T15:08:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- autenticainvoice -->
-        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.InvoiceTest@239963d8]" name="after" is-config="true" duration-ms="161" started-at="2018-10-08T19:20:51Z" finished-at="2018-10-08T19:20:51Z">
+        </test-method> <!-- loginComSucesso -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.Login@57fffcd7]" name="after" is-config="true" duration-ms="206" started-at="2018-10-11T15:08:30Z" finished-at="2018-10-11T15:08:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=autenticainvoice status=SUCCESS method=InvoiceTest.autenticainvoice()[pri:2, instance:tests.InvoiceTest@239963d8] output={null}]]]>
+                <![CDATA[[TestResult name=loginComSucesso status=SUCCESS method=Login.loginComSucesso()[pri:0, instance:tests.Login@57fffcd7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.InvoiceTest@239963d8]" name="getResult" is-config="true" duration-ms="4" started-at="2018-10-08T19:20:51Z" finished-at="2018-10-08T19:20:51Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Login@57fffcd7]" name="getResult" is-config="true" duration-ms="2" started-at="2018-10-11T15:08:30Z" finished-at="2018-10-11T15:08:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=autenticainvoice status=SUCCESS method=InvoiceTest.autenticainvoice()[pri:2, instance:tests.InvoiceTest@239963d8] output={null}]]]>
+                <![CDATA[[TestResult name=loginComSucesso status=SUCCESS method=Login.loginComSucesso()[pri:0, instance:tests.Login@57fffcd7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:tests.InvoiceTest@239963d8]" name="endReport" is-config="true" duration-ms="514" started-at="2018-10-08T19:20:51Z" finished-at="2018-10-08T19:20:51Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:tests.Login@57fffcd7]" name="before" is-config="true" duration-ms="1916" started-at="2018-10-11T15:08:30Z" finished-at="2018-10-11T15:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7]" name="autenticaFalha" duration-ms="12921" started-at="2018-10-11T15:08:32Z" description="Invalid login with incorrect username and password." data-provider="getData" finished-at="2018-10-11T15:08:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demouser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- autenticaFalha -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.Login@57fffcd7]" name="after" is-config="true" duration-ms="177" started-at="2018-10-11T15:08:45Z" finished-at="2018-10-11T15:08:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=autenticaFalha status=SUCCESS method=Login.autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Login@57fffcd7]" name="getResult" is-config="true" duration-ms="0" started-at="2018-10-11T15:08:45Z" finished-at="2018-10-11T15:08:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=autenticaFalha status=SUCCESS method=Login.autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="before()[pri:0, instance:tests.Login@57fffcd7]" name="before" is-config="true" duration-ms="1717" started-at="2018-10-11T15:08:45Z" finished-at="2018-10-11T15:08:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7]" name="autenticaFalha" duration-ms="15932" started-at="2018-10-11T15:08:47Z" description="Invalid login with incorrect username and password." data-provider="getData" finished-at="2018-10-11T15:09:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[demouser_]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[xyz]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- autenticaFalha -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.Login@57fffcd7]" name="after" is-config="true" duration-ms="162" started-at="2018-10-11T15:09:03Z" finished-at="2018-10-11T15:09:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=autenticaFalha status=SUCCESS method=Login.autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Login@57fffcd7]" name="getResult" is-config="true" duration-ms="1" started-at="2018-10-11T15:09:03Z" finished-at="2018-10-11T15:09:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=autenticaFalha status=SUCCESS method=Login.autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="before()[pri:0, instance:tests.Login@57fffcd7]" name="before" is-config="true" duration-ms="1730" started-at="2018-10-11T15:09:03Z" finished-at="2018-10-11T15:09:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7]" name="autenticaFalha" duration-ms="13878" started-at="2018-10-11T15:09:05Z" description="Invalid login with incorrect username and password." data-provider="getData" finished-at="2018-10-11T15:09:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[demouser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[nananana]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- autenticaFalha -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.Login@57fffcd7]" name="after" is-config="true" duration-ms="161" started-at="2018-10-11T15:09:18Z" finished-at="2018-10-11T15:09:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=autenticaFalha status=SUCCESS method=Login.autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Login@57fffcd7]" name="getResult" is-config="true" duration-ms="1" started-at="2018-10-11T15:09:19Z" finished-at="2018-10-11T15:09:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=autenticaFalha status=SUCCESS method=Login.autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="before()[pri:0, instance:tests.Login@57fffcd7]" name="before" is-config="true" duration-ms="1605" started-at="2018-10-11T15:09:19Z" finished-at="2018-10-11T15:09:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7]" name="autenticaFalha" duration-ms="14111" started-at="2018-10-11T15:09:20Z" description="Invalid login with incorrect username and password." data-provider="getData" finished-at="2018-10-11T15:09:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demouser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- autenticaFalha -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.Login@57fffcd7]" name="after" is-config="true" duration-ms="156" started-at="2018-10-11T15:09:34Z" finished-at="2018-10-11T15:09:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=autenticaFalha status=SUCCESS method=Login.autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Login@57fffcd7]" name="getResult" is-config="true" duration-ms="0" started-at="2018-10-11T15:09:34Z" finished-at="2018-10-11T15:09:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=autenticaFalha status=SUCCESS method=Login.autenticaFalha(java.lang.String, java.lang.String)[pri:1, instance:tests.Login@57fffcd7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:tests.Login@57fffcd7]" name="endReport" is-config="true" duration-ms="503" started-at="2018-10-11T15:09:34Z" finished-at="2018-10-11T15:09:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- tests.InvoiceTest -->
+      </class> <!-- tests.Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

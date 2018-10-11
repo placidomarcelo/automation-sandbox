@@ -15,6 +15,7 @@ import pages.BookingPage;
 import pages.InvoicePage;
 import pages.LoginPage;
 import reports.ExtentReportsClass;
+import utility.ConfigReader;
 
 /**
  * Validate invoice page.
@@ -22,10 +23,11 @@ import reports.ExtentReportsClass;
 
 public class InvoiceTest extends ExtentReportsClass {
 	WebDriver driver;
+	ConfigReader config = new ConfigReader();
 
 	@BeforeMethod
 	public void before() {
-		System.setProperty("webdriver.chrome.driver", "/users/pferreira/drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", config.getChromePath());
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 	}
